@@ -1,0 +1,19 @@
+
+-32767,16,161,8
+60.0,16,161,8
+500.0,50,135,28
+100.0,84,60,14
+1500.0,163,133,78
+2001.0,255,255,255
+ 
+ 
+dsm.tif
+gdaldem hillshade -of PNG 0365027e_361004n_20171220T093831Z_dsm.tif output-hillshade.png
+gdal_contour -a elev 0365027e_361004n_20171220T093831Z_dsm.tif output-countour.shp -i 10
+gdaldem color-relief 0365027e_361004n_20171220T093831Z_dsm.tif colors.txt output-colorrelief.tif
+
+
+
+gdaldem hillshade -of PNG ALPSMLC30_N038E028_DSM.tif output-hillshade1.png
+gdal_contour -a elev ALPSMLC30_N038E028_DSM.tif output-contour1.png -i 10
+gdaldem color-relief ALPSMLC30_N038E028_DSM.tif colors.txt output-colorrelief1.tif
