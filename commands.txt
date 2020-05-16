@@ -1,0 +1,4 @@
+mvn exec:java -Dexec.mainClass=org.geotools.tutorial.quickstart.Quickstart
+mvn exec:java -Dexec.mainClass=org.geotools.tutorial.feature.Csv2Shape
+mvn exec:java -Dexec.mainClass=org.geotools.tutorial.crs.CRSLab
+mvn exec:java -Dexec.mainClass=org.geotools.tutorial.ShpReader
