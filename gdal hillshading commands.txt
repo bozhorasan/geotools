@@ -19,6 +19,6 @@ gdal_contour -a elev ALPSMLC30_N038E028_DSM.tif output-contour1.png -i 10
 gdaldem color-relief ALPSMLC30_N038E028_DSM.tif colors.txt output-colorrelief1.tif
 
 
-convert shp to geojson
+convert shp to geojson using GDAL
 ogr2ogr -f GeoJSON -t_srs crs:84 location-convertedfromshp.geojson location.shp
 ogr2ogr -f GeoJSON -s_srs crs:84 -t_srs crs:84 contour-convertedfromshp.geojson contour.shp
