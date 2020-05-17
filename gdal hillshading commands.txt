@@ -17,3 +17,8 @@ gdaldem color-relief 0365027e_361004n_20171220T093831Z_dsm.tif colors.txt output
 gdaldem hillshade -of PNG ALPSMLC30_N038E028_DSM.tif output-hillshade1.png
 gdal_contour -a elev ALPSMLC30_N038E028_DSM.tif output-contour1.png -i 10
 gdaldem color-relief ALPSMLC30_N038E028_DSM.tif colors.txt output-colorrelief1.tif
+
+
+convert shp to geojson
+ogr2ogr -f GeoJSON -t_srs crs:84 location-convertedfromshp.geojson location.shp
+ogr2ogr -f GeoJSON -s_srs crs:84 -t_srs crs:84 contour-convertedfromshp.geojson contour.shp
