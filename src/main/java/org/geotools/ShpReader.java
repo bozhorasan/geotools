@@ -25,14 +25,14 @@ public class ShpReader {
     public static void main(String[] args) {
         ShpReader shpReader = new ShpReader();
         try {
-//            shpReader.Method1();
-            shpReader.Method2();
+//            shpReader.method1();
+            shpReader.method2();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private void Method2() throws IOException {
+    private void method2() throws IOException {
         FileDataStore fileDataStore = FileDataStoreFinder.getDataStore(new File(fileName));
         SimpleFeatureSource simpleFeatureSource = fileDataStore.getFeatureSource();
         SimpleFeatureCollection simpleFeatureCollection = simpleFeatureSource.getFeatures();
@@ -72,7 +72,7 @@ public class ShpReader {
         System.out.println("Feature Counter:" + featureCounter);
     }
 
-    private void Method1() throws IOException {
+    private void method1() throws IOException {
         ShpFiles shapeFiles;
         GeometryFactory geometryFactory = JTSFactoryFinder.getGeometryFactory();
         System.out.println("Shape File Reader App");
