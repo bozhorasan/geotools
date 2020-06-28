@@ -1,0 +1,13 @@
+You should be linking GDAL Jar to your environment manually:
+To do this,
+Open Project Structure in IDEA
+Select Modules
+On the right hand side there are 3 tabs: Sources,Paths,Dependencies
+Selected dependencies
+Click + add button and select add Jar
+Browse your working GDAL folder in your computer:
+C:\Program Files\GDAL\java\gdal.jar (this is version 2.2.3)
+Add this jar to the list AND Using Move Up promote this jar file to the top just below Maven..:hamcrest...
+
+Not: There is already Maven:org.gdal:gdal:2.2.0 in the list toward the end of the list. According to my experience 
+no need to remove this dependency, DTED example continues to run as long as our our gdal jar is at the top.
